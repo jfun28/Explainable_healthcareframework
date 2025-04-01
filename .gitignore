@@ -6,3 +6,12 @@ data/
 *.pkl
 *.pickle
 *.png
+
+Synthetic_data/
+*.txt
+*.csv
+*.xlsx
+*.pth
+*.pkl
+*.pickle
+*.png
