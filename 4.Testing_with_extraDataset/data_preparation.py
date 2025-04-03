@@ -26,10 +26,6 @@ def preprocess_data(generation):
     X_test = np.loadtxt(path+f'\\Synthetic_data\\train_valid_test\\서울초_{generation}_X_test.txt', delimiter=',')
     y_test = np.loadtxt(path+f'\\Synthetic_data\\train_valid_test\\서울초_{generation}_y_test.txt', delimiter=',')
     
-    # # # 라벨 값 조정 (1 빼기)
-    # y_train = y_train - 1
-    # y_valid = y_valid - 1
-    # y_test = y_test - 1
     
     # 트레이닝 데이터에 맞춰 인코더 학습
     encoder = LabelEncoder()

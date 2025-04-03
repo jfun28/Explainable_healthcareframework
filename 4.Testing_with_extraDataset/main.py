@@ -45,7 +45,7 @@ def main():
         X_train_feature_attrs = extract_tabnet_embeddings(tabnet_clf, X_train_torch, device=device)
         X_test_feature_attrs = extract_tabnet_embeddings(tabnet_clf, X_test_torch, device=device)
         
-        # 7. 표준화3
+        # 7. 표준화
         X_train_std, X_test_std, scaler = standardize_features(X_train_feature_attrs, X_test_feature_attrs)
         
         # 8. 스케일러 저장
