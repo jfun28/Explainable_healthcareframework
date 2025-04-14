@@ -8,6 +8,7 @@ from encoding_tabnet import train_tabnet_classifier, create_augmented_features2,
 from xgboost_optimizer import optimize_and_compare_models
 from utils import standardize_features, calculate_metrics, save_model, print_results
 import os
+
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # 프로젝트 루트 디렉토리 경로 (현재 파일의 상위 디렉토리)
@@ -82,6 +83,7 @@ def main():
             'Precision': round(precision, 5),
             'Recall': round(recall, 5)
         }
+        
         
         # 12. 리스트에 딕셔너리 추가
         model_results_list.append(result_dict)

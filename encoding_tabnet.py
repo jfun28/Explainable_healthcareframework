@@ -5,6 +5,56 @@ import numpy as np
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
 
+# def train_tabnet_classifier(X_train, y_train, X_valid, y_valid):
+#     """TabNet 분류기 학습 함수"""
+#     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    
+#     tabnet_params = {
+#         "n_d": 8,
+#         "n_a": 8,
+#         "n_steps": 5,
+#         "gamma": 1.3,
+#         "cat_idxs": [],
+#         "cat_dims": [],
+#         "cat_emb_dim": [],
+#         "n_independent": 2,
+#         "n_shared": 2,
+#         "epsilon": 1e-15,
+#         "momentum": 0.02,
+#         "lambda_sparse": 0.001,
+#         "seed": 0,
+#         "clip_value": 1,
+#         "verbose": 1,
+#         "optimizer_fn": torch.optim.Adam,
+#         "optimizer_params": {'lr': 0.02},
+#         "scheduler_fn": None,
+#         "scheduler_params": {},
+#         "mask_type": 'sparsemax',
+#         "input_dim": X_train.shape[1],
+#         "output_dim": len(np.unique(y_train)),
+#         "device_name": 'auto',
+#         "n_shared_decoder": 1,
+#         "n_indep_decoder": 1,
+#         "grouped_features": []
+#     }
+    
+#     tabnet_clf = TabNetClassifier(**tabnet_params)
+#     max_epochs = 300
+    
+#     tabnet_clf.fit(
+#         X_train=X_train, 
+#         y_train=y_train,
+#         eval_set=[(X_valid, y_valid)],
+#         max_epochs=max_epochs,
+#         patience=50,
+#         batch_size=5000,
+#         virtual_batch_size=5000,
+#         num_workers=1,
+#         drop_last=False,
+#     )
+    
+#     return tabnet_clf
+
 from sklearn.utils.class_weight import compute_class_weight
 
 def train_tabnet_classifier(X_train, y_train, X_valid, y_valid):
@@ -80,6 +130,8 @@ def train_tabnet_classifier(X_train, y_train, X_valid, y_valid):
     
     return tabnet_clf
 
+
+
 def create_augmented_features(tabnet_model, X):
     masks, _=tabnet_model.explain(X)
     
@@ -88,8 +140,8 @@ def create_augmented_features(tabnet_model, X):
     print(f"샘플별 마스크 평균 shape: {masks.shape}")
    
     augmented_features = np.hstack([X, masks])
+    augmented_features2 = X+masks
 
-    
     return masks
 
 
@@ -102,7 +154,6 @@ def create_augmented_features2(tabnet_model, X):
    
     augmented_features = np.hstack([X, masks,predict_proba])
 
-    
     return augmented_features
 
 

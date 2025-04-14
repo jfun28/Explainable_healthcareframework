@@ -142,7 +142,7 @@ def create_augmented_features(tabnet_model, X):
     augmented_features = np.hstack([X, masks])
     augmented_features2 = X+masks
 
-    return augmented_features2
+    return masks
 
 
 def create_augmented_features2(tabnet_model, X):
