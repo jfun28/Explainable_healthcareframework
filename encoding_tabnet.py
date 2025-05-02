@@ -135,26 +135,10 @@ def train_tabnet_classifier(X_train, y_train, X_valid, y_valid):
 def create_augmented_features(tabnet_model, X):
     masks, _=tabnet_model.explain(X)
     
-    
-    print(f"원본 특성 shape: {X.shape}")
-    print(f"샘플별 마스크 평균 shape: {masks.shape}")
-   
-    augmented_features = np.hstack([X, masks])
-    augmented_features2 = X+masks
 
     return masks
 
 
-def create_augmented_features2(tabnet_model, X):
-    masks, _=tabnet_model.explain(X)
-    predict_proba=tabnet_model.predict_proba(X)
-    
-    print(f"원본 특성 shape: {X.shape}")
-    print(f"샘플별 마스크 평균 shape: {masks.shape}")
-   
-    augmented_features = np.hstack([X, masks,predict_proba])
-
-    return augmented_features
 
 
 
