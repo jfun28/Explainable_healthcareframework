@@ -37,7 +37,7 @@ This repository summarizes the research paper "Application of Explainable Artifi
 <table>
   <tr>
     <td style="width:30%;">
-      <img src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" width="100%" />
+      <img src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" width="70%" />
     </td>
     <td style="vertical-align:top; padding-left: 10px;">
       <ol>
