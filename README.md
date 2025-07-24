@@ -30,3 +30,15 @@ graph TD
    F --> H[TabNet Masks]
    G --> I[Personalized Insights]
    H --> I
+
+
+📋 Requirements
+python>=3.8
+tensorflow>=2.0
+xgboost>=1.5.0
+pytorch-tabnet>=3.1.1
+shap>=0.41.0
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+nbsynthetic>=0.1.0
