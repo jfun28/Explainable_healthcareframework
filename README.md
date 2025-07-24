@@ -1,1 +1,109 @@
-# Explainable_healthcareframework
+# Application of Explainable Artificial Intelligence for personalized childhood weight management using IoT data
+
+[cite_start]This repository summarizes the research paper "Application of Explainable Artificial Intelligence for personalized childhood weight management using IoT data" by Jaemin Jeong et al.[cite: 1, 2]. The study proposes a comprehensive framework leveraging wearable devices and AI to address challenges in childhood obesity research, including data limitations, class imbalance, and model interpretability.
+
+## Abstract
+Childhood obesity is a growing global health concern. [cite_start]This study introduces a framework that uses wearable devices for real-time lifestyle data collection, employs Wasserstein generative adversarial networks (WGANs) to handle data imbalance, and incorporates an explainable model architecture combining Tabular Attention Network (TabNet) with eXtreme Gradient Boosting (XGBoost)[cite: 8, 9]. [cite_start]SHapley Additive exPlanations (SHAP) analysis is used for enhanced interpretability[cite: 9]. [cite_start]The framework was validated with data from 362 elementary school students over six months and an external validation set of 82 students, achieving 98.0% accuracy on the test dataset and 85.2% on external data[cite: 10, 11]. [cite_start]The framework aims to provide personalized health guidance by explaining individual factors contributing to weight change[cite: 12].
+
+[cite_start]**Keywords**: Healthcare, Shapley additive explanation (SHAP), Tabnet, Explainable artificial intelligence (XAI), Generative adversarial networks (GAN) [cite: 13]
+
+## 1. Introduction
+[cite_start]Childhood obesity is increasing globally due to unhealthy lifestyles[cite: 15, 16]. [cite_start]Early detection and prevention are crucial[cite: 18]. [cite_start]While AI advancements aid in predicting childhood obesity, challenges such as continuous health data acquisition, class imbalance, and model interpretability persist[cite: 20, 21, 26, 28, 32]. [cite_start]This study proposes a novel healthcare framework for predicting weight changes using real-time lifestyle data from smartwatches and smartphones[cite: 34]. [cite_start]It addresses class imbalance using a GAN-based model for data augmentation [cite: 38] [cite_start]and enhances transparency with interpretable machine learning models like TabNet and SHAP[cite: 39, 41, 42, 43].
+
+**Contributions of this study are summarized as follows**:
+1.  [cite_start]Proposed a healthcare framework for monitoring weight changes and collecting real-time lifestyle data to prevent obesity[cite: 51].
+2.  [cite_start]Addressed class imbalance by generating additional data using a GAN-based model for improved training[cite: 52].
+3.  [cite_start]Enhanced transparency and interpretability using the TabNet mask mechanism and SHAP technique[cite: 53].
+4.  [cite_start]Provided personalized lifestyle feedback based on predictive interpretations[cite: 54].
+
+## 2. Background and Related Work
+
+### 2.1. Synthetic data generation
+[cite_start]Robust classification predictions in machine learning require balanced classes[cite: 59]. [cite_start]Synthetic data generation, evolving from methods like SMOTE and ADASYN to GAN-based approaches, addresses data scarcity and imbalance while protecting privacy[cite: 61, 62, 63]. [cite_start]GANs (Generative Adversarial Networks) consist of a generator and discriminator to produce high-quality synthetic data[cite: 64, 66]. [cite_start]This study utilized a Wasserstein GAN-based generative model (nbsynthetic) to augment data for minority classes[cite: 69, 274].
+
+### 2.2. Explainable Artificial Intelligence (XAI)
+[cite_start]XAI techniques enhance the interpretability and trustworthiness of AI systems[cite: 71]. [cite_start]They are categorized into model-intrinsic (e.g., decision trees) and post-hoc methods (e.g., SHAP, LIME)[cite: 72, 73, 74, 75, 76]. [cite_start]This study applied both in a complementary manner[cite: 78].
+
+#### 2.2.1. SHAP
+[cite_start]SHAP (SHapley Additive exPlanations) is a post-hoc XAI method based on game theory, measuring each feature's contribution to the final outcome as an importance score[cite: 80, 81, 82]. [cite_start]It calculates how model prediction changes with and without a feature[cite: 83].
+
+### 2.3. Related work
+Previous studies have applied machine learning and XAI to obesity. Key examples include:
+* **Kim et al. [cite_start](2021)**: Predicted childhood weight changes using lifestyle data with RETAIN model and RNN attention mechanism for interpretation. [cite: 95, 96]
+* **Kiss et al. [cite_start](2024)**: Classified childhood obesity using EBM algorithm with Fitbit data, leveraging EBM's interpretable structure. [cite: 97, 98, 99]
+* **Rossman et al. [cite_start](2021)**: Developed a gradient boosting tree model for obesity risk prediction using EHR data, explained by SHAP. [cite: 100, 101, 102]
+* **Khater et al. [cite_start](2023)**: Proposed a multiclass obesity classification using XGBoost and random forest, with permutation importance and partial dependence plots for explanation. [cite: 103, 104, 105]
+* [cite_start]**Proposed (2025)**: This study's framework uses a Hybrid model (TabNet, XGBoost) with TabNet mask mechanism and SHAP for explainable weight change prediction using lifelog variables, achieving 98.00% accuracy. [cite: 140]
+
+## 3. Framework for childhood weight management using XAI
+
+### 3.1. Overview
+[cite_start]The proposed framework is a healthcare monitoring system utilizing edge devices (wearable devices like smartwatches) and a monitoring device (smartphone) to collect and process data, which is then sent to a cloud server for storage and model training[cite: 133, 134, 135, 136, 138, 139]. [cite_start]The trained model provides weight change predictions to the user's monitoring device[cite: 145].
+
+The overall architecture involves three stages:
+1.  [cite_start]**Data Collection and Preprocessing in IoT**: Raw lifelog data (height, weight, calorie intake, burned calories, step count, sleep time) are collected from users via smartphones and wearable devices. [cite: 167, 168, 169, 171, 172, 175, 176]
+2.  **Training XAI Models with Synthetic Data Generation**: Preprocessed data is augmented using synthetic data generation techniques (e.g., nbsynthetic, SMOTE, ADASYN, CopulaGAN, CTGAN) to address class imbalance. [cite_start]The best synthetic data is selected to train the proposed hybrid XAI model (TabNet Encoding + XGBoost). [cite: 178, 179, 180, 181, 184, 185, 186, 189, 190, 191, 201, 204]
+3.  **Model Evaluation and Explanation**: The trained XAI model is evaluated using test and external datasets. [cite_start]TabNet's mask mechanism and SHAP are used to explain the model's predictions and provide feedback to users. [cite: 193, 195, 196, 197, 210, 211, 217, 219]
+
+### 3.2. Data collection and Preprocessing
+[cite_start]Data collected from wearable devices and smartphones are synchronized and managed by health-tracking applications[cite: 148]. [cite_start]Height and weight data are regularly updated by participants or their parents[cite: 153]. [cite_start]Caloric intake is estimated based on food photos or manual entries, referencing the National Food Nutrition database[cite: 154, 155, 157]. [cite_start]Burned calories, step count, and sleep time are collected from the smartwatch or inferred from smartphone sensors[cite: 165, 221, 222, 223, 224].
+
+**Preprocessing steps**:
+1.  **Remove outlier values**: Outliers in height were corrected with historical values. Calorie intake outliers were adjusted by multiplying single-meal logs by three and applying min-max scaling with an upper limit of 4,000 kcal. [cite_start]Other features like step count, sleep duration, and burned calories also had upper limits applied. [cite: 228, 229, 232, 233, 234, 235, 236, 237, 238, 239, 242]
+2.  **Missing value imputation**: Linear interpolation was used for height and weight due to their linear changes over time. [cite_start]Other missing values were replaced with the median for each user. [cite: 243, 244, 245, 246, 247, 249]
+3.  **Data grouping & Labeling**: Input data was averaged over a 14-day period daily. [cite_start]Weight changes exceeding a 100-gram threshold were categorized into three classes: 1 (weight loss), 2 (weight maintenance), and 3 (weight gain). [cite: 251, 252, 253, 254, 256, 257, 259, 260, 365, 366]
+
+### 3.3. Training XAI models with synthetic data generation
+
+### 3.3.1. Synthetic data generation
+[cite_start]To address class imbalance, 10,000 data points were generated for each minority class (weight loss and weight gain) and incorporated into the training dataset[cite: 263, 264, 272]. [cite_start]Various data generation techniques, including SMOTE, ADASYN, nbsynthetic, CTGAN, and CopulaGAN, were compared[cite: 265, 267]. [cite_start]Nbsynthetic was chosen for its superior effectiveness in model performance and robustness, being an unconditional Wasserstein GAN-based open-source library[cite: 274, 275].
+
+### 3.3.2. Proposed hybrid XAI model architecture
+[cite_start]A multiclass prediction model for weight change (loss, maintenance, gain) was developed using a hybrid approach combining TabNet and XGBoost[cite: 279, 280]. [cite_start]TabNet performs sparse feature selection and trains attention masks, revealing features focused on at each step, thereby enhancing interpretability[cite: 281, 282, 283, 306]. [cite_start]XGBoost, an enhanced gradient boosting algorithm, reduces training error incrementally[cite: 307, 308]. [cite_start]This hybrid architecture effectively combines TabNet's interpretability with XGBoost's predictive power[cite: 332]. [cite_start]The model used five TabNet steps repeated for 100 epochs, and XGBoost parameters were optimized using Bayesian optimization[cite: 333].
+
+## 3.4. Model evaluation and explanation
+[cite_start]The model was evaluated using 10% of School A's data as test data and School B's data as external validation data[cite: 335, 336]. [cite_start]Performance metrics included accuracy, F1-score, precision, and recall[cite: 337]. [cite_start]TabNet's intrinsic mask mechanism and SHAP analysis were used for interpretability[cite: 338, 339]. [cite_start]Case studies demonstrated the practical validity of the model[cite: 341].
+
+## 4. Experimental results
+
+### 4.1. Description of experimental dataset
+[cite_start]Lifelog data was collected from 362 elementary school students in Seoul (School A) for six months and 82 students in Jeju (School B) for eight weeks, using Samsung Galaxy Fit 2 smartwatches and synchronized applications (WUD! and Samsung Health)[cite: 350, 351, 353, 355, 357, 358]. [cite_start]The final dataset for School A had 44,226 records from 243 participants, and for School B, 3,343 records from 77 participants[cite: 356, 359]. [cite_start]Weight changes exceeding 100 grams were considered clinically meaningful[cite: 365]. [cite_start]Weight loss (Label 1) was 1.15%, weight gain (Label 3) was 2.7%, and weight maintenance (Label 2) was 96.15%, indicating class imbalance[cite: 367, 368].
+
+### 4.2. Model evaluation
+
+#### 4.2.1. Results of model prediction by generation methods
+[cite_start]Training the model on data augmented with synthetic samples significantly reduced prediction bias towards the weight maintenance class[cite: 377, 378]. [cite_start]The model trained with nbsynthetic-generated data achieved the most balanced performance on the test dataset, with class-wise accuracies of 0.9673 (weight loss), 0.9955 (weight maintenance), and 0.9268 (weight gain)[cite: 379]. [cite_start]Nbsynthetic-based generation also demonstrated the best overall performance on the test dataset (accuracy 0.980, F1-score 0.979, precision 0.979, recall 0.980) and strong resilience on the external dataset (accuracy 0.852, F1-score 0.814)[cite: 381, 483].
+
+#### 4.2.2. Results of predictions by the interpretable model
+[cite_start]The proposed hybrid model consistently outperformed other interpretable models (TabNet, decision tree, naive Bayes, LDA, GAMs) across all evaluation metrics on both test and external datasets when trained with nbsynthetic-generated data[cite: 598, 599, 600, 603, 604].
+
+#### 4.2.3. Statistical validation of performance differences among models
+[cite_start]Statistical analysis showed that the performance differences between the proposed XAI model and comparison models were statistically significant ($p < 0.05$) for most metrics[cite: 606, 610]. [cite_start]However, for Decision Tree and TabNet models, some metrics (F1-score, precision, recall) had p-values exceeding 0.05, indicating less statistical significance in those specific differences[cite: 611, 612].
+
+### 4.3. Explainability results
+
+### 4.3.1. Model explanations
+[cite_start]**Global feature importance using TabNet (model-intrinsic)**: The most influential features were height, step count, weight, calorie intake, sleep duration, and burned calories, in descending order[cite: 691].
+[cite_start]**Global feature importance using SHAP (post-hoc)**: SHAP values showed similar rankings, with height having the highest contribution and burned calories the lowest[cite: 697, 698]. [cite_start]Height was prominent due to the study participants being elementary school children in their growth phase, suggesting growth-related factors contribute to weight gain[cite: 699, 766, 767]. [cite_start]The framework helps distinguish between unhealthy weight gain and normal growth[cite: 770].
+
+### 4.3.2. Proof of concept for personalized healthcare
+Case studies for weight loss and weight gain demonstrated the framework's practical application and personalized insights.
+
+**Weight loss (User 1, days 20-24)**:
+* [cite_start]**TabNet mask heatmap**: Weight, step count, and burned calories had the most significant influence on weight loss prediction[cite: 788, 790].
+* [cite_start]**SHAP force and waterfall plots**: Calorie intake, weight, sleep time, height, and step count contributed positively to weight loss prediction, with calorie intake and sleep duration being the most important[cite: 795, 797, 800, 801]. [cite_start]A marked decrease in calorie intake and an increase in sleep duration explained the predicted weight loss[cite: 802, 803].
+
+**Weight gain (User 2, days 41-45)**:
+* [cite_start]**TabNet mask heatmap**: Burned calorie count, step count, and height were identified as primary contributors to weight gain prediction[cite: 923, 924].
+* [cite_start]**SHAP force and waterfall plots**: Sleep duration and step count had the highest SHAP values, indicating their significant influence on weight gain prediction[cite: 928, 929]. [cite_start]Reduced sleep duration and a decrease in step count contributed to weight gain[cite: 970, 971, 972].
+
+## 5. Discussion
+[cite_start]This study successfully proposed an explainable healthcare framework for early childhood obesity prevention by predicting weight changes using IoT data[cite: 974, 975]. [cite_start]The nbsynthetic-based Wasserstein GAN effectively augmented minority class samples, leading to superior performance of the hybrid TabNet-XGBoost model, even on external datasets[cite: 976, 977, 978, 979]. [cite_start]XAI techniques (TabNet masks and SHAP) provided meaningful feedback by interpreting decision-making processes and analyzing lifestyle patterns[cite: 980, 981].
+
+**Limitations and Future Work**:
+* Frequent missing data due to the requirement of carrying devices, limiting the full utilization of certain variables. [cite_start]Future work should enhance incentive systems for user participation[cite: 983, 984, 985, 986].
+* [cite_start]Performance decrease on external datasets highlights the need for further optimization techniques like domain adaptation or transfer learning to improve generalization[cite: 987, 988, 989].
+* [cite_start]Discrepancies between variable importance from mask attention and SHAP values suggest a need for an integrated framework for model interpretation[cite: 990, 991].
+
+## 6. Conclusion
+[cite_start]The proposed framework accurately predicts weight changes and effectively interprets model predictions using XAI techniques (TabNet mask mechanism and SHAP)[cite: 994]. [cite_start]The hybrid TabNet-XGBoost architecture, combined with nbsynthetic-generated synthetic data, consistently showed high performance[cite: 995, 996, 1079]. [cite_start]The consistency between the two interpretability methods reinforces the framework's reliability[cite: 1082]. [cite_start]Case studies validated real-world applicability, showing individualized predictions and interpretations aligning with varying lifestyle patterns[cite: 1083, 1084]. [cite_start]This explainable predictive healthcare framework has the potential to enhance user trust, expand healthcare applications, and contribute significantly to childhood obesity prevention through personalized feedback and early awareness[cite: 1086, 1087, 1088].
