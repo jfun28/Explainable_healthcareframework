@@ -52,3 +52,26 @@ nbsynthetic>=0.1.0
 - **Label 1**: Weight Loss (1.15%)
 - **Label 2**: Weight Maintenance (96.15%) 
 - **Label 3**: Weight Gain (2.7%)
+
+## 🧠 Model Architecture
+Hybrid TabNet-XGBoost Model
+<img alt="image" src="https://github.com/user-attachments/assets/50ac2c50-5e9b-4971-96c4-42bd1c1e1913" width="50%"/>
+
+## 📈 Performance Results
+
+### Model Performance (Test Dataset)
+| Metric | Value |
+|--------|-------|
+| Accuracy | 98.0% |
+| F1-Score | 97.9% |
+| Precision | 97.9% |
+| Recall | 98.0% |
+
+### Class-wise Performance
+- **Weight Loss**: 96.73% accuracy
+- **Weight Maintenance**: 99.55% accuracy  
+- **Weight Gain**: 92.68% accuracy
+
+### External Validation (School B)
+- **Accuracy**: 85.2%
+- **F1-Score**: 81.4%
