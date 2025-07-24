@@ -61,7 +61,7 @@ Hybrid TabNet-XGBoost Model
 ## 📈 Performance Results
 
 ### Model Performance (Test Dataset)
-<img alt="image" src="https://github.com/user-attachments/assets/5ab89260-1bb0-4c2d-a7a8-f5e0ca20b5b2" width="50%" />
+<img alt="image" src="https://github.com/user-attachments/assets/5ab89260-1bb0-4c2d-a7a8-f5e0ca20b5b2" width="70%" />
 
 
 ### Class-wise Performance
