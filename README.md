@@ -34,12 +34,20 @@ This repository summarizes the research paper "Application of Explainable Artifi
 ## 3. Framework for childhood weight management using XAI
 
 ### 3.1. Overview
-[cite_start]The proposed framework is a healthcare monitoring system utilizing edge devices (wearable devices like smartwatches) and a monitoring device (smartphone) to collect and process data, which is then sent to a cloud server for storage and model training[cite: 133, 134, 135, 136, 138, 139]. [cite_start]The trained model provides weight change predictions to the user's monitoring device[cite: 145].
+<img width="876" height="922" alt="image" src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" />
 
-The overall architecture involves three stages:
-1.  [cite_start]**Data Collection and Preprocessing in IoT**: Raw lifelog data (height, weight, calorie intake, burned calories, step count, sleep time) are collected from users via smartphones and wearable devices. [cite: 167, 168, 169, 171, 172, 175, 176]
-2.  **Training XAI Models with Synthetic Data Generation**: Preprocessed data is augmented using synthetic data generation techniques (e.g., nbsynthetic, SMOTE, ADASYN, CopulaGAN, CTGAN) to address class imbalance. [cite_start]The best synthetic data is selected to train the proposed hybrid XAI model (TabNet Encoding + XGBoost). [cite: 178, 179, 180, 181, 184, 185, 186, 189, 190, 191, 201, 204]
-3.  **Model Evaluation and Explanation**: The trained XAI model is evaluated using test and external datasets. [cite_start]TabNet's mask mechanism and SHAP are used to explain the model's predictions and provide feedback to users. [cite: 193, 195, 196, 197, 210, 211, 217, 219]
+1. Data Collection and Preprocessing
+   Collect data through IoT devices
+   Implement a preprocessing pipeline
+2. Training of Explainable AI model
+   Generate training data using diverse synthetic methods
+   Train a proposed XAI model
+3. Model Evaluation and Explanation
+   Model performance using an external dataset
+   Applied XAI techniques as proof of concept
+
+
+
 
 ### 3.2. Data collection and Preprocessing
 [cite_start]Data collected from wearable devices and smartphones are synchronized and managed by health-tracking applications[cite: 148]. [cite_start]Height and weight data are regularly updated by participants or their parents[cite: 153]. [cite_start]Caloric intake is estimated based on food photos or manual entries, referencing the National Food Nutrition database[cite: 154, 155, 157]. [cite_start]Burned calories, step count, and sleep time are collected from the smartwatch or inferred from smartphone sensors[cite: 165, 221, 222, 223, 224].
