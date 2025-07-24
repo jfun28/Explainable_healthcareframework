@@ -11,30 +11,13 @@ This repository summarizes the research paper "Application of Explainable Artifi
 
 <img width="1763" height="565" alt="image" src="https://github.com/user-attachments/assets/5e30846c-9bc8-49fa-bd95-d918fb967528" />
 
-**Contributions of this study are summarized as follows**:
-1.  [cite_start]Proposed a healthcare framework for monitoring weight changes and collecting real-time lifestyle data to prevent obesity[cite: 51].
-2.  [cite_start]Addressed class imbalance by generating additional data using a GAN-based model for improved training[cite: 52].
-3.  [cite_start]Enhanced transparency and interpretability using the TabNet mask mechanism and SHAP technique[cite: 53].
-4.  [cite_start]Provided personalized lifestyle feedback based on predictive interpretations[cite: 54].
+**Research Objective**:
+1. Develop a personalized AI healthcare framework
+2. Proactively predicts weight fluctuations
+3. Performs screening and causal analysis
 
-## 2. Background and Related Work
 
-### 2.1. Synthetic data generation
-[cite_start]Robust classification predictions in machine learning require balanced classes[cite: 59]. [cite_start]Synthetic data generation, evolving from methods like SMOTE and ADASYN to GAN-based approaches, addresses data scarcity and imbalance while protecting privacy[cite: 61, 62, 63]. [cite_start]GANs (Generative Adversarial Networks) consist of a generator and discriminator to produce high-quality synthetic data[cite: 64, 66]. [cite_start]This study utilized a Wasserstein GAN-based generative model (nbsynthetic) to augment data for minority classes[cite: 69, 274].
 
-### 2.2. Explainable Artificial Intelligence (XAI)
-[cite_start]XAI techniques enhance the interpretability and trustworthiness of AI systems[cite: 71]. [cite_start]They are categorized into model-intrinsic (e.g., decision trees) and post-hoc methods (e.g., SHAP, LIME)[cite: 72, 73, 74, 75, 76]. [cite_start]This study applied both in a complementary manner[cite: 78].
-
-#### 2.2.1. SHAP
-[cite_start]SHAP (SHapley Additive exPlanations) is a post-hoc XAI method based on game theory, measuring each feature's contribution to the final outcome as an importance score[cite: 80, 81, 82]. [cite_start]It calculates how model prediction changes with and without a feature[cite: 83].
-
-### 2.3. Related work
-Previous studies have applied machine learning and XAI to obesity. Key examples include:
-* **Kim et al. [cite_start](2021)**: Predicted childhood weight changes using lifestyle data with RETAIN model and RNN attention mechanism for interpretation. [cite: 95, 96]
-* **Kiss et al. [cite_start](2024)**: Classified childhood obesity using EBM algorithm with Fitbit data, leveraging EBM's interpretable structure. [cite: 97, 98, 99]
-* **Rossman et al. [cite_start](2021)**: Developed a gradient boosting tree model for obesity risk prediction using EHR data, explained by SHAP. [cite: 100, 101, 102]
-* **Khater et al. [cite_start](2023)**: Proposed a multiclass obesity classification using XGBoost and random forest, with permutation importance and partial dependence plots for explanation. [cite: 103, 104, 105]
-* [cite_start]**Proposed (2025)**: This study's framework uses a Hybrid model (TabNet, XGBoost) with TabNet mask mechanism and SHAP for explainable weight change prediction using lifelog variables, achieving 98.00% accuracy. [cite: 140]
 
 ## 3. Framework for childhood weight management using XAI
 
