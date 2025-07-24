@@ -7,6 +7,8 @@ data/
 *.pickle
 *.png
 
+*.init
+
 Synthetic_data/
 *.txt
 *.csv
