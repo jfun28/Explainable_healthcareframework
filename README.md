@@ -1,4 +1,4 @@
-# 🏥 XAI-Powered Childhood Weight Management System
+# 🏥 XAI-based Childhood Weight Management System
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Pytorch](https://img.shields.io/badge/Pytorch1.16+-orange.svg)](https://pytorch.org)
