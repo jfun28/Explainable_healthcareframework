@@ -42,3 +42,18 @@ numpy>=1.21.0
 pandas>=1.3.0
 scikit-learn>=1.0.0
 nbsynthetic>=0.1.0
+
+📊 Dataset Information
+Data Collection
+
+School A (Seoul): 362 elementary students, 6 months, 44,226 records
+School B (Jeju): 82 elementary students, 8 weeks, 3,343 records
+Devices: Samsung Galaxy Fit 2, WUD! app, Samsung Health
+
+Features Collected
+FeatureSourceDescriptionHeight/WeightManual entryRegular updates by participants/parentsCalorie IntakeFood photos/manualBased on National Food Nutrition databaseStep CountSmartwatchDaily physical activitySleep DurationSmartwatch/smartphoneSleep pattern analysisBurned CaloriesSmartwatchEnergy expenditure
+Target Labels
+
+Label 1: Weight Loss (1.15%)
+Label 2: Weight Maintenance (96.15%)
+Label 3: Weight Gain (2.7%)
