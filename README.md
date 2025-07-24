@@ -56,12 +56,12 @@ nbsynthetic>=0.1.0
 ## 🧠 Model Architecture
 Hybrid TabNet-XGBoost Model
 
-<img alt="image" src="https://github.com/user-attachments/assets/50ac2c50-5e9b-4971-96c4-42bd1c1e1913" width="50%"/>
+<img alt="image" src="https://github.com/user-attachments/assets/50ac2c50-5e9b-4971-96c4-42bd1c1e1913" width="80%"/>
 
 ## 📈 Performance Results
 
 ### Model Performance (Test Dataset)
-<img alt="image" src="https://github.com/user-attachments/assets/5ab89260-1bb0-4c2d-a7a8-f5e0ca20b5b2" width="70%" />
+<img alt="image" src="https://github.com/user-attachments/assets/5ab89260-1bb0-4c2d-a7a8-f5e0ca20b5b2" width="80%" />
 
 
 ### Class-wise Performance
