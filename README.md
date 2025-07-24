@@ -18,18 +18,9 @@ An innovative framework leveraging wearable devices and explainable AI to addres
 - **📱 Real-time Monitoring**: Continuous lifestyle pattern analysis
 
 ## 🏗️ System Architecture
+<img alt="image" src="https://github.com/user-attachments/assets/1f492658-d0bb-471d-828f-f763f3a5fc68" width="50%" /> />
 
-```mermaid
-graph TD
-   A[IoT Devices] --> B[Data Collection]
-   B --> C[Preprocessing Pipeline]
-   C --> D[Synthetic Data Generation]
-   D --> E[Hybrid XAI Model]
-   E --> F[Weight Change Prediction]
-   F --> G[SHAP Analysis]
-   F --> H[TabNet Masks]
-   G --> I[Personalized Insights]
-   H --> I
+
 '''
 
 📋 Requirements
