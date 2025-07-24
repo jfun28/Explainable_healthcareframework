@@ -9,13 +9,17 @@ This repository summarizes the research paper "Application of Explainable Artifi
 - Annual increase in the prevalence of childhood obesity
 - Current digital healthcare applications have limited effectiveness in motivating users from an obesity prevention perspective
 
-<img width="1763" height="565" alt="image" src="https://github.com/user-attachments/assets/5e30846c-9bc8-49fa-bd95-d918fb967528" />
+<img width="1663" height="465" alt="image" src="https://github.com/user-attachments/assets/5e30846c-9bc8-49fa-bd95-d918fb967528" />
 
 **Research Objective**:
 1. Develop a personalized AI healthcare framework
 2. Proactively predicts weight fluctuations
 3. Performs screening and causal analysis
 
+## 2. Background
+Synthetic Data Generation
+<img width="725" height="105" alt="image" src="https://github.com/user-attachments/assets/36af8559-806b-4512-9f10-9e402a5809ac" />
+<img width="1478" height="285" alt="image" src="https://github.com/user-attachments/assets/384ad9a9-b848-43da-9bad-847991d53f71" />
 
 
 
