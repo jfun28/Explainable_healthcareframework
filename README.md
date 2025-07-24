@@ -1,14 +1,15 @@
 # Application of Explainable Artificial Intelligence for personalized childhood weight management using IoT data
 
-[cite_start]This repository summarizes the research paper "Application of Explainable Artificial Intelligence for personalized childhood weight management using IoT data" by Jaemin Jeong et al.[cite: 1, 2]. The study proposes a comprehensive framework leveraging wearable devices and AI to address challenges in childhood obesity research, including data limitations, class imbalance, and model interpretability.
+This repository summarizes the research paper "Application of Explainable Artificial Intelligence for personalized childhood weight management using IoT data" by Jaemin Jeong et al. The study proposes a comprehensive framework leveraging wearable devices and AI to address challenges in childhood obesity research, including data limitations, class imbalance, and model interpretability.
 
-## Abstract
-Childhood obesity is a growing global health concern. [cite_start]This study introduces a framework that uses wearable devices for real-time lifestyle data collection, employs Wasserstein generative adversarial networks (WGANs) to handle data imbalance, and incorporates an explainable model architecture combining Tabular Attention Network (TabNet) with eXtreme Gradient Boosting (XGBoost)[cite: 8, 9]. [cite_start]SHapley Additive exPlanations (SHAP) analysis is used for enhanced interpretability[cite: 9]. [cite_start]The framework was validated with data from 362 elementary school students over six months and an external validation set of 82 students, achieving 98.0% accuracy on the test dataset and 85.2% on external data[cite: 10, 11]. [cite_start]The framework aims to provide personalized health guidance by explaining individual factors contributing to weight change[cite: 12].
 
-[cite_start]**Keywords**: Healthcare, Shapley additive explanation (SHAP), Tabnet, Explainable artificial intelligence (XAI), Generative adversarial networks (GAN) [cite: 13]
+**Keywords**: Healthcare, Shapley additive explanation (SHAP), Tabnet, Explainable artificial intelligence (XAI), Generative adversarial networks (GAN)
 
 ## 1. Introduction
-[cite_start]Childhood obesity is increasing globally due to unhealthy lifestyles[cite: 15, 16]. [cite_start]Early detection and prevention are crucial[cite: 18]. [cite_start]While AI advancements aid in predicting childhood obesity, challenges such as continuous health data acquisition, class imbalance, and model interpretability persist[cite: 20, 21, 26, 28, 32]. [cite_start]This study proposes a novel healthcare framework for predicting weight changes using real-time lifestyle data from smartwatches and smartphones[cite: 34]. [cite_start]It addresses class imbalance using a GAN-based model for data augmentation [cite: 38] [cite_start]and enhances transparency with interpretable machine learning models like TabNet and SHAP[cite: 39, 41, 42, 43].
+- Annual increase in the prevalence of childhood obesity
+- Current digital healthcare applications have limited effectiveness in motivating users from an obesity prevention perspective
+<img width="2446" height="174" alt="image" src="https://github.com/user-attachments/assets/7606aeb4-77f0-45b3-8933-3cfc3b49ee90" />
+
 
 **Contributions of this study are summarized as follows**:
 1.  [cite_start]Proposed a healthcare framework for monitoring weight changes and collecting real-time lifestyle data to prevent obesity[cite: 51].
