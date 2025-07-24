@@ -17,10 +17,19 @@ This repository summarizes the research paper "Application of Explainable Artifi
 3. Performs screening and causal analysis
 
 ## 2. Background
-Synthetic Data Generation
-<img width="725" height="105" alt="image" src="https://github.com/user-attachments/assets/36af8559-806b-4512-9f10-9e402a5809ac" />
-<img width="1478" height="285" alt="image" src="https://github.com/user-attachments/assets/384ad9a9-b848-43da-9bad-847991d53f71" />
+**Synthetic Data Generation** 
+- Process of creating artificial data that mimics the statistical properties and patterns of real-world data
+- Oversampling: Synthetic Miniority Oversampling Technique (SMOTE), Adaptive Synthetic Sampling (ADASYN)
+- GAN: CTGAN, CopulaGAN, TableGAN, WGAN
 
+**Explainable Artificial Intelligence (XAI)**
+- XAI enhances AI interpretability and trust by using interpretable models or post-hoc explanation methods
+- Model-intrinsic methods : TabNet, Decision tree, Linear and logistic regression, Naïve bayes, and General Additive Models (GAMs)
+- Model-post hoc methods : SHapley Additive exPlanations (SHAP), Local Interpretable Model-agnostic Explanations (LIME)
+
+**SHapley Additive exPlanations (SHAP)**
+- It calculates the importance score of a feature by evaluating how the model prediction changes with and without that feature
+<img width="883" height="161" alt="image" src="https://github.com/user-attachments/assets/27d6e684-6f3f-40a6-9b72-d6fd13408948" />
 
 
 ## 3. Framework for childhood weight management using XAI
