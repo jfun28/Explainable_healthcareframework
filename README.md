@@ -36,22 +36,25 @@ This repository summarizes the research paper "Application of Explainable Artifi
 ### 3.1. Overview
 <table>
   <tr>
-    <td style="width:30%;">
-      <img src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" width="70%" />
+    <!-- Left: Image Column (30% of total width) -->
+    <td style="width:30%; vertical-align:top; text-align:center;">
+      <img src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" width="90%" />
     </td>
-    <td style="vertical-align:top; padding-left: 10px;">
+
+    <!-- Right: Text Column (70% of total width) -->
+    <td style="width:70%; vertical-align:top; padding-left:15px;">
       <ol>
         <li><strong>Data Collection and Preprocessing</strong><br/>
-            - Collect data through IoT devices<br/>
-            - Implement a preprocessing pipeline
+            – Collect data through IoT devices<br/>
+            – Implement a preprocessing pipeline
         </li><br/>
         <li><strong>Training of Explainable AI Model</strong><br/>
-            - Generate training data using diverse synthetic methods<br/>
-            - Train a proposed XAI model
+            – Generate training data using diverse synthetic methods<br/>
+            – Train a proposed XAI model
         </li><br/>
         <li><strong>Model Evaluation and Explanation</strong><br/>
-            - Evaluate model performance using external dataset<br/>
-            - Apply XAI techniques as proof of concept
+            – Evaluate model performance using external dataset<br/>
+            – Apply XAI techniques as proof of concept
         </li>
       </ol>
     </td>
