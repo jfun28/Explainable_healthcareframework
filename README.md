@@ -8,8 +8,8 @@ This repository summarizes the research paper "Application of Explainable Artifi
 ## 1. Introduction
 - Annual increase in the prevalence of childhood obesity
 - Current digital healthcare applications have limited effectiveness in motivating users from an obesity prevention perspective
-<img width="2446" height="174" alt="image" src="https://github.com/user-attachments/assets/7606aeb4-77f0-45b3-8933-3cfc3b49ee90" />
 
+<img width="1763" height="565" alt="image" src="https://github.com/user-attachments/assets/5e30846c-9bc8-49fa-bd95-d918fb967528" />
 
 **Contributions of this study are summarized as follows**:
 1.  [cite_start]Proposed a healthcare framework for monitoring weight changes and collecting real-time lifestyle data to prevent obesity[cite: 51].
