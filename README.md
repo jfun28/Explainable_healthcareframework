@@ -34,15 +34,15 @@ This repository summarizes the research paper "Application of Explainable Artifi
 ## 3. Framework for childhood weight management using XAI
 
 ### 3.1. Overview
-<table style="width:100%;">
+<table>
   <tr>
-    <!-- 왼쪽: 이미지 (고정 폭), 중앙 정렬 -->
-    <td style="width:35%; vertical-align:top; text-align:center;">
-      <img src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" width="95%" />
+    <!-- 이미지 셀 -->
+    <td style="width:30%; vertical-align:top; text-align:center;">
+      <img src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" width="100%" />
     </td>
 
-    <!-- 오른쪽: 설명 (남은 영역) -->
-    <td style="width:65%; vertical-align:top; padding-left:10px;">
+    <!-- 텍스트 셀 -->
+    <td style="width:70%; vertical-align:top; padding-left:15px;">
       <ol>
         <li><strong>Data Collection and Preprocessing</strong><br/>
             – Collect data through IoT devices<br/>
