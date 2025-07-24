@@ -34,7 +34,7 @@ This repository summarizes the research paper "Application of Explainable Artifi
 ## 3. Framework for childhood weight management using XAI
 
 ### 3.1. Overview
-<img width="876" height="922" alt="image" src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" />
+<img src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" style="width:50%;"/>
 
 1. Data Collection and Preprocessing
    Collect data through IoT devices
