@@ -34,19 +34,29 @@ This repository summarizes the research paper "Application of Explainable Artifi
 ## 3. Framework for childhood weight management using XAI
 
 ### 3.1. Overview
-<img src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" style="width:50%;"/>
-
-1. Data Collection and Preprocessing
-   Collect data through IoT devices
-   Implement a preprocessing pipeline
-2. Training of Explainable AI model
-   Generate training data using diverse synthetic methods
-   Train a proposed XAI model
-3. Model Evaluation and Explanation
-   Model performance using an external dataset
-   Applied XAI techniques as proof of concept
-
-
+<table>
+  <tr>
+    <td style="width:50%;">
+      <img src="https://github.com/user-attachments/assets/5f2cd6c8-5905-4512-b096-fc3fbe6a6b37" width="100%" />
+    </td>
+    <td style="vertical-align:top; padding-left: 10px;">
+      <ol>
+        <li><strong>Data Collection and Preprocessing</strong><br/>
+            - Collect data through IoT devices<br/>
+            - Implement a preprocessing pipeline
+        </li><br/>
+        <li><strong>Training of Explainable AI Model</strong><br/>
+            - Generate training data using diverse synthetic methods<br/>
+            - Train a proposed XAI model
+        </li><br/>
+        <li><strong>Model Evaluation and Explanation</strong><br/>
+            - Evaluate model performance using external dataset<br/>
+            - Apply XAI techniques as proof of concept
+        </li>
+      </ol>
+    </td>
+  </tr>
+</table>
 
 
 ### 3.2. Data collection and Preprocessing
