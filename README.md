@@ -30,6 +30,7 @@ This repository summarizes the research paper "Application of Explainable Artifi
 **SHapley Additive exPlanations (SHAP)**
 - It calculates the importance score of a feature by evaluating how the model prediction changes with and without that feature
 <img src="https://github.com/user-attachments/assets/209187c2-404d-4ea2-b230-aac100fa62ba" style="width:50%;">
+
 ## 3. Framework for childhood weight management using XAI
 
 ### 3.1. Overview
